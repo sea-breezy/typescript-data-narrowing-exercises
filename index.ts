@@ -1,27 +1,33 @@
-console.log("Hello world");
+interface ShapeExample {
+    kind: "circle" | "square";
+    radius?: number;
+    sideLength?: number;
+}
 
-
-//Scenario
-
-
-
-//Client
-//Admin
-//Dev
-
-//Some code that is not really using types.
-function displayHomePageText(User: string) {
-    console.log('Hello user')
+//Example of equality narrowing.
+//error TS18048: 'shape.radius' is possibly 'undefined'.
+function getAreaExample(shape: ShapeExample) {
+    if (shape.kind === "circle") {
+        return Math.PI * shape.radius ** 2;
+    }
 
 }
 
-//Showcase different ways of type narrowing.
 
-//Union types
-
-//Type predicates
-
-//Flow analysis - how the parser helps you with undefined and reducing the scope
+//Discriminated union types
 
 
-displayHomePageText('test');
+// type Shape = ???
+
+//Define a function getArea that gets the area of the shape. Lets only consider squares and circles.
+//Hint: define an union type Shape
+//Shape of circle is Math.Pi * radius ** 2
+//Shape of square is sideLength ** 2
+
+//Test data: area of square with sideLength 2, should be 4.
+//Test data: area of circle with radius 2, should be 12.57 aprox.
+
+function getArea() {
+    //TODO: implement me
+    return;
+}
