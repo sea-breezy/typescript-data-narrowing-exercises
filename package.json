@@ -2,10 +2,10 @@
   "name": "typescript-training",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "discriminatedUnions.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node index.ts"
+    "start": "ts-node discriminatedUnions.ts"
   },
   "author": "",
   "license": "ISC",

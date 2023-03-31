@@ -21,10 +21,14 @@ export const persons: Person[] = [
     { type: 'admin', name: 'Bruce Willis', age: 64, role: 'World saver' }
 ];
 
-export function isAdmin(person: Person) {
+
+//Make this a type predicate
+export function isAdmin(person: Person){
     return person.type === 'admin';
 }
 
+
+//Make this a type predicate
 export function isUser(person: Person) {
     return person.type === 'user';
 }
@@ -40,6 +44,7 @@ export function logPerson(person: Person) {
     console.log(` - ${person.name}, ${person.age}, ${additionalInformation}`);
 }
 
+//These logs should print peoples additional information!
 console.log('Admins:');
 persons.filter(isAdmin).forEach(logPerson);
 
