@@ -1,5 +1,7 @@
 # Typescript Narrowing
 
+Node version: v16.19.1
+
 Please run:
 
 ```bash
