@@ -6,11 +6,10 @@ Please run:
 nvm install
 nvm use
 npm i
-npm i -g ts-node
 ```
 
 Go through the files and follow the instructions for each exercise.
-You can use the command `ts-node FILE_NAME` to run the file (this should be a global package on your Mac)
+You can use the command `npm run start FILE_NAME` to run the file (this should be a global package on your Mac)
 Pay close attention to how typescript interacts with the IDE highlighting to help us code and catch type errors :)
 
 Order of exercies:
