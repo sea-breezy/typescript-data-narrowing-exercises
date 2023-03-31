@@ -6,6 +6,7 @@ interface ShapeExample {
 
 //Example of equality narrowing.
 //error TS18048: 'shape.radius' is possibly 'undefined'.
+//We use the ! operator to help compiler know this is defined - bad practice.
 function getAreaExample(shape: ShapeExample) {
     if (shape.kind === "circle") {
         return Math.PI * shape.radius! ** 2;
