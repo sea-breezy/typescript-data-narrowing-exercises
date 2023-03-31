@@ -14,7 +14,7 @@ export type User = Client | Admin;
 
 
 function displayHomePageText(user: User) {
-    if('role' in user) {
+    if('access' in user) {
         console.log('Hello Admin')
     } else {
         console.log('Hello Client')
