@@ -1,3 +1,5 @@
+//Exercise complete
+
 
 interface HomePageProps {
     firstName: string;
@@ -6,9 +8,12 @@ interface HomePageProps {
 
 //use typeOf for simple types.
 function renderHomePageText({firstName, lastLogin} : HomePageProps) {
-    //TODO use typeguards (typeOf) to make the second log not show when lastLogin undefined.
+    //TODO use typeguards (typeOf) to make the second log not show when lastLogin undefined
     console.log(` Hello - ${firstName} `)
-    console.log(` Your last login was - ${lastLogin} `)
+    if (typeof lastLogin !== 'undefined') {
+        console.log(` Your last login was - ${lastLogin} `)
+    }
+
 }
 
 const noLastLogin : HomePageProps = {firstName: 'Andres'}
