@@ -8,10 +8,10 @@ interface HomePagePropsDate {
 function renderHomePageTextWithDate({firstName, lastLogin} : HomePagePropsDate) {
     //TODO Use narrowing to help the compiler see that lastLogin has access to the Date class methods
     console.log(` Hello - ${firstName} `)
-    if (typeof lastLogin === Date) {
+    if (lastLogin instanceof Date) {
         console.log(` Your last login was - ${lastLogin.toUTCString()} `)
     } else{
-        console.log(` Your last login was - ${lastLogin.toUpperCase()} `)
+        console.log(` Your last login was - ${lastLogin?.toUpperCase()} `)
 
     }
 }

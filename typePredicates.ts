@@ -23,13 +23,13 @@ export const persons: Person[] = [
 
 
 //Make this a type predicate
-export function isAdmin(person: Person){
+export function isAdmin(person: Person): person is Admin{
     return person.type === 'admin';
 }
 
 
 //Make this a type predicate
-export function isUser(person: Person) {
+export function isUser(person: Person): person is User {
     return person.type === 'user';
 }
 
@@ -39,7 +39,8 @@ export function isUser(person: Person) {
 export function logPerson(person: Person) {
     let additionalInformation: string = '';
     //TODO. implement me
-    //...
+    if (isUser(person)) additionalInformation = person.occupation;
+    else if (isAdmin(person)) additionalInformation = person.role;
 
     console.log(` - ${person.name}, ${person.age}, ${additionalInformation}`);
 }
